@@ -1,0 +1,372 @@
+POST https://hilfe.matt-edv.de/centronservicede/REST/Login
+accept: application/json
+
+{
+  "Ticket": "Text",
+  "TrimResponse": 0,
+  "Data": {
+    "AppVersion": "2.0.2409.884",
+    "Application": "5b6fd73e-a6f3-4b90-89f7-b99658976743",
+    "Device": "Testclient",
+    "LoginKind": 1,
+    "Password": "Siddharthine;1",
+    "Username": "Jeremy"
+  }
+}
+
+<> 2025-02-17T101845.200.json
+<> 2025-01-30T081441.200.json
+###
+
+POST https://hilfe.matt-edv.de/centronservicede/REST/GetLoggedInUser
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0
+}
+###
+
+POST https://hilfe.matt-edv.de/centronservicede/REST/GetAllAppUsers
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+}
+
+<> 2025-01-28T115902.200.json
+<> 2025-01-28T115851.200.json
+###
+
+POST https://hilfe.matt-edv.de/centronservicede/REST/GetCustomerByI3D
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": 610269
+}
+
+<> 2025-02-06T132035.200.json
+###
+
+POST https://hilfe.matt-edv.de/centronservicede/REST/GetTicket
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "IgnoreLock": true,
+    "TicketI3D": 66570
+  }
+}
+###
+
+POST https://hilfe.matt-edv.de/centronservicede/REST/GetEmployeeByI3D
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": 49
+}
+
+<> 2025-02-18T081943.200.json
+<> 2025-02-18T081926.200.json
+###
+
+POST https://hilfe.matt-edv.de/centronservicede/REST/GetOrder
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": 23158
+}
+
+
+
+
+
+
+
+
+#-----------------------------------------------------------
+#monitoring
+#-----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetAllCustomerSoftwareOverview
+accept: application/json
+
+{
+"Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+"Data": {
+"Software": "Sophos Endpoint Firewall",
+}
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetActiveDeviceClass
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetNewTicketFromCustomer
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": 610318
+}
+
+<> 2025-01-30T100156.200.json
+<> 2025-01-30T100036.200.json
+<> 2025-01-30T095917.200.json
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetMonJobs
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "DeviceI3Ds": [
+      123
+    ],
+    "I3Ds": [
+      281
+    ],
+    "LoadDeviceJobs": true,
+    "OnlyActivatedJobs": true,
+    "StartupJobs": true
+  }
+}
+
+<> 2025-02-06T135214.200.json
+<> 2025-02-06T132132.200.json
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetAllDevicesByShortName
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": "Server"
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetDeployableJobInstallationHistoryPaging
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "DeviceI3D": 2092,
+    "EntriesPerPage": 100,
+    "Page": 1
+  }
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetAllCustomerSoftwareOverview
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "DeviceClass": 0,
+    "Software": "Firewall"
+  }
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/AssetManagementLicenseSoftwareByFilter
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "I3Ds": [
+      2
+    ],
+    "ProductI3Ds": [
+      3
+    ]
+  }
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/Account/GetProducts
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetDeployablePackages
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "CentronPortalPackages": true,
+    "I3D": 174191,
+    "LoadVersionList": true,
+    "PackageI3Ds": [
+      4187
+    ],
+    "PackageName": "Notepad++",
+    "PortalI3Ds": [
+      3451
+    ],
+    "SearchText": "Text",
+    "Tags": [
+      "Text"
+    ],
+    "Version": "8.5.8",
+    "WithHidden": true
+  }
+}
+
+<> 2025-02-18T083221.200.json
+<> 2025-02-18T083138.200.json
+<> 2025-02-06T135448.200.json
+<> 2025-02-06T135322.200.json
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetDeployableJobDetailsByFilter
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "EntriesPerPage": 123,
+    "Filter": {
+    },
+    "Page": 123
+  }
+}
+
+<> 2025-02-18T084430.200.json
+<> 2025-02-18T083617.200.json
+<> 2025-02-18T083554.200.json
+<> 2025-02-18T083235.200.json
+<> 2025-02-18T083108.200.json
+<> 2025-02-18T083101.200.json
+<> 2025-02-18T083056.200.json
+<> 2025-02-18T083052.200.json
+<> 2025-02-18T083043.200.json
+<> 2025-02-18T083019.200.json
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetMonitoringDeviceDashboard
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": {
+    "CheckResults": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0
+    ],
+    "CheckTypes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+
+    ],
+    "CustomerI3Ds": [
+      610009
+    ],
+    "DeviceClasses": [
+      "Workstation"
+    ],
+    "LoadDevicesWithoutChecks": true,
+    "LoadNoAgentDevices": false
+  }
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetAllApplicationsWithDeviceCountByCustomerI3D
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": 610009
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetAllAssetManagementApplicationList
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetDocuboardDashboardApplicationByCustomerI3D
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0,
+  "Data": 610009
+}
+###
+
+POST https://monitoring01.matt-edv.com/docuboardde/REST/GetAllApplicationsWithDeviceCount
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0
+}
+###

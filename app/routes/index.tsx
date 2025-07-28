@@ -1,10 +1,10 @@
+import React from "react";
+
 export default function Home() {
     return (
-        <div className="max-w-2xl mx-auto">
-            <h1 className="text-4xl font-extrabold mb-4">Willkommen!</h1>
-            <p className="text-lg leading-relaxed text-gray-700">
-                Hier findest du deine Geräte und Tickets mit einem schicken Tab‑System oben.
-            </p>
+        <div className="max-w-2xl mx-auto space-y-4">
+            <h1 className="text-4xl font-extrabold">Willkommen!</h1>
+            <p>Hier findest du deine Geräte und Tickets ganz oben im Tab‑Menü.</p>
         </div>
     );
 }

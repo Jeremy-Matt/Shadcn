@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Device {
     DeviceI3D: number;
@@ -54,6 +55,7 @@ export default function Geraete() {
     const [versionFilter, setVersionFilter] = React.useState<string>("");
     const [deviceFilter, setDeviceFilter] = React.useState<string>("");
     const [page, setPage] = React.useState(1);
+    const navigate = useNavigate();
 
     const searchDevices = React.useCallback(
         async (software: string) => {
@@ -192,7 +194,15 @@ export default function Geraete() {
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                     {pagedDevices.map((d) => (
-                        <tr key={d.DeviceI3D}>
+                        <tr
+                            key={d.DeviceI3D}
+                            className="hover:bg-gray-100 cursor-pointer"
+                            onDoubleClick={() =>
+                                navigate(`/geraete/bearbeiten/${d.DeviceI3D}`, {
+                                    state: d,
+                                })
+                            }
+                        >
                             <td className="px-3 py-2">{d.CustomerI3D}</td>
                             <td className="px-3 py-2">{d.CustomerName}</td>
                             <td className="px-3 py-2">{d.Software}</td>

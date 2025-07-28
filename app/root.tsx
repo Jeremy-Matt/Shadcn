@@ -1,6 +1,7 @@
+// app/root.tsx
+import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar       from "./components/ui/Navbar";
-import "./app.css";
+import Navbar from "./components/ui/Navbar";
 
 export default function Root() {
     return (
