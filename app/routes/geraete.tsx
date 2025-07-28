@@ -180,40 +180,42 @@ export default function Geraete() {
                         ))}
                     </select>
                 </form>
-                <table className="min-w-full divide-y divide-gray-200">
-                    <thead>
-                    <tr>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Kundennummer</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Kundenname</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Software</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Version</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Hostname</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Benutzer</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Letztes Update</th>
-                    </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-200">
-                    {pagedDevices.map((d) => (
-                        <tr
-                            key={d.DeviceI3D}
-                            className="hover:bg-gray-100 cursor-pointer"
-                            onDoubleClick={() =>
-                                navigate(`/geraete/bearbeiten/${d.DeviceI3D}`, {
-                                    state: d,
-                                })
-                            }
-                        >
-                            <td className="px-3 py-2">{d.CustomerI3D}</td>
-                            <td className="px-3 py-2">{d.CustomerName}</td>
-                            <td className="px-3 py-2">{d.Software}</td>
-                            <td className="px-3 py-2">{d.SoftwareVersion}</td>
-                            <td className="px-3 py-2">{d.DeviceName}</td>
-                            <td className="px-3 py-2">{d.LastUser ?? "-"}</td>
-                            <td className="px-3 py-2">{formatDate(d.LastUpdate)}</td>
+                <div className="overflow-x-auto rounded-lg border bg-white shadow">
+                    <table className="min-w-full divide-y divide-gray-200 text-sm">
+                        <thead className="bg-gray-50">
+                        <tr>
+                            <th className="px-3 py-2 text-left font-medium text-gray-500">Kundennummer</th>
+                            <th className="px-3 py-2 text-left font-medium text-gray-500">Kundenname</th>
+                            <th className="px-3 py-2 text-left font-medium text-gray-500">Software</th>
+                            <th className="px-3 py-2 text-left font-medium text-gray-500">Version</th>
+                            <th className="px-3 py-2 text-left font-medium text-gray-500">Hostname</th>
+                            <th className="px-3 py-2 text-left font-medium text-gray-500">Benutzer</th>
+                            <th className="px-3 py-2 text-left font-medium text-gray-500">Letztes Update</th>
                         </tr>
-                    ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200">
+                        {pagedDevices.map((d) => (
+                            <tr
+                                key={d.DeviceI3D}
+                                className="even:bg-gray-50 hover:bg-gray-100 cursor-pointer"
+                                onDoubleClick={() =>
+                                    navigate(`/geraete/bearbeiten/${d.DeviceI3D}`, {
+                                        state: d,
+                                    })
+                                }
+                            >
+                                <td className="px-3 py-2 whitespace-nowrap">{d.CustomerI3D}</td>
+                                <td className="px-3 py-2 whitespace-nowrap">{d.CustomerName}</td>
+                                <td className="px-3 py-2 whitespace-nowrap">{d.Software}</td>
+                                <td className="px-3 py-2 whitespace-nowrap">{d.SoftwareVersion}</td>
+                                <td className="px-3 py-2 whitespace-nowrap">{d.DeviceName}</td>
+                                <td className="px-3 py-2 whitespace-nowrap">{d.LastUser ?? "-"}</td>
+                                <td className="px-3 py-2 whitespace-nowrap">{formatDate(d.LastUpdate)}</td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
+                </div>
                 {pageCount > 1 && (
                     <div className="mt-4 flex gap-2">
                         <button
