@@ -196,7 +196,7 @@ export default function Geraete() {
                     {pagedDevices.map((d) => (
                         <tr
                             key={d.DeviceI3D}
-                            className="hover:bg-gray-100 cursor-pointer"
+                            className="hover:bg-gray-200 cursor-pointer"
                             onDoubleClick={() =>
                                 navigate(`/geraete/bearbeiten/${d.DeviceI3D}`, {
                                     state: d,
