@@ -158,7 +158,7 @@ export default function Geraete() {
                     <select
                         value={versionFilter}
                         onChange={(e) => setVersionFilter(e.target.value)}
-                        className="border rounded px-2 py-1"
+                        className="hover:bg-gray-100 cursor-pointer border rounded px-2 py-1"
                     >
                         <option value="">Alle Versionen</option>
                         {versionOptions.map((v) => (
@@ -170,7 +170,7 @@ export default function Geraete() {
                     <select
                         value={deviceFilter}
                         onChange={(e) => setDeviceFilter(e.target.value)}
-                        className="border rounded px-2 py-1"
+                        className="hover:bg-gray-100 cursor-pointer border rounded px-2 py-1"
                     >
                         <option value="">Alle Geräte</option>
                         {deviceOptions.map((d) => (
@@ -183,13 +183,13 @@ export default function Geraete() {
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead>
                     <tr>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Kundennummer</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Kundenname</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Software</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Version</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Hostname</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Benutzer</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-500">Letztes Update</th>
+                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-600">Kundennummer</th>
+                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-600">Kundenname</th>
+                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-600">Software</th>
+                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-600">Version</th>
+                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-600">Hostname</th>
+                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-600">Benutzer</th>
+                        <th className="px-3 py-2 text-left text-xs font-medium text-gray-600">Letztes Update</th>
                     </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
@@ -217,7 +217,7 @@ export default function Geraete() {
                 {pageCount > 1 && (
                     <div className="mt-4 flex gap-2">
                         <button
-                            className="px-3 py-1 border rounded"
+                            className="hover:bg-gray-200 cursor-pointer px-3 py-1 border rounded"
                             onClick={() => setPage((p) => Math.max(1, p - 1))}
                             disabled={page === 1}
                         >
@@ -227,7 +227,7 @@ export default function Geraete() {
                         Seite {page} / {pageCount}
                     </span>
                         <button
-                            className="px-3 py-1 border rounded"
+                            className="hover:bg-gray-200 cursor-pointer px-3 py-1 border rounded"
                             onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
                             disabled={page === pageCount}
                         >
