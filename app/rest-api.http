@@ -59,7 +59,7 @@ accept: application/json
   "TrimResponse": 0,
   "Data": {
     "IgnoreLock": true,
-    "TicketI3D": 66570
+    "TicketI3D": 69921
   }
 }
 ###
@@ -83,8 +83,21 @@ accept: application/json
 {
   "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
   "TrimResponse": 0,
-  "Data": 23158
+  "Data": 69921
 }
+###
+
+POST https://hilfe.matt-edv.de/centronservicede/REST/GetAllTicketStatistics
+accept: application/json
+
+{
+  "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
+  "TrimResponse": 0
+}
+
+
+
+
 
 
 
@@ -137,7 +150,7 @@ accept: application/json
 {
   "Ticket": "029FFA7F432A4CF44E523B2DE5F58E106353B60E",
   "TrimResponse": 0,
-  "Data": 610318
+  "Data": 610261
 }
 
 <> 2025-01-30T100156.200.json
